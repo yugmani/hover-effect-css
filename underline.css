@@ -1,0 +1,12 @@
+.container {
+  background-color: white;
+}
+
+.penu a {
+  color: inherit;
+  position: relative;
+}
+
+.penu a::before {
+  content: '';
+}
