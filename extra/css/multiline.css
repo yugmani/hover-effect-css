@@ -26,7 +26,7 @@
 .content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 ul {
@@ -34,7 +34,6 @@ ul {
 }
 
 .menu {
-  /* background-color: gray; */
   padding: 10px;
   display: inline-block;
   position: relative;
@@ -93,6 +92,10 @@ a {
   transform-origin: top right;
 }
 
+/* ********************************** */
+/* First nice hover effect */
+/* ********************************** */
+
 .menu a:hover .border-top,
 .menu a:hover .border-bottom {
   transform: scaleX(1);
@@ -113,4 +116,21 @@ a {
 
 .menu a:hover .border-left {
   transition-delay: calc(var(--transition-delay) * 3);
+}
+
+/* ********************************** */
+/* 2nd nice hover effect */
+/* ********************************** */
+
+.menu[data-animation='diagonal'] .border-left {
+  transform-origin: top left;
+}
+
+.menu[data-animation='diagonal'] .border-right,
+.menu[data-animation='diagonal'] .border-bottom {
+  transform-origin: bottom right;
+}
+
+.menu[data-animation='diagonal'] a:hover [class^='border'] {
+  transition-delay: 0s;
 }
